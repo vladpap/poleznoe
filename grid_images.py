@@ -12,8 +12,6 @@ def make_images_3x3_grid(imgs, id_imgs, border=0):
     grid = Image.new('RGB',
         size=(w + border * 2 ,  h + border * (rows - 1)),
         color=(200,200,200))
-    # grid_w, grid_h = grid.size
-    # print(f'width = {grid.size[0]}, height = {grid.size[1]}')
     
     if sys.platform == 'linux':
         font_name = 'arial.ttf'
@@ -71,5 +69,3 @@ if __name__ == '__main__':
     id_list = [*range(75, 96)]
     catalog = make_catalog(images, id_list)
     catalog[0]['img'].show()
-    print(catalog)
-
